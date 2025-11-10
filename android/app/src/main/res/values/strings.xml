@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">habitta</string>
+    <string name="title_activity_main">habitta</string>
+    <string name="package_name">com.av.habitta</string>
+    <string name="custom_url_scheme">com.av.habitta</string>
+</resources>
