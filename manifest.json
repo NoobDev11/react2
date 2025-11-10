@@ -1,0 +1,33 @@
+{
+  "short_name": "Habitta",
+  "name": "Habitta",
+  "description": "A beautiful and simple app to track your habits, build streaks, and achieve your goals. Visualize your progress with calendars and stats, and stay motivated with achievements.",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/vite.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#7C3AED",
+  "background_color": "#F2ECFD"
+}

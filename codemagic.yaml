@@ -1,0 +1,15 @@
+workflows:
+  android-debug-workflow:
+    name: Build habitta Debug APK
+    environment:
+      node: latest
+      java: 17
+    scripts:
+      - npm install
+      - npm run build
+      - npx cap sync android
+      - cd android && chmod +x gradlew
+      - cd android && ./gradlew assembleDebug
+      - cd android && ls app/build/outputs/apk/debug
+    artifacts:
+      - android/app/build/outputs/apk/debug/*.apk

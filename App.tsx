@@ -64,6 +64,19 @@ const App: React.FC = () => {
     // isInitialized remains false.
   }, [user]);
 
+  // Effect to register the service worker for PWA offline capabilities
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(error => {
+          console.log('ServiceWorker registration failed: ', error);
+        });
+      });
+    }
+  }, []);
+
   // Effect for scheduling notifications
   useEffect(() => {
     notificationTimeouts.current.forEach(clearTimeout);
@@ -450,8 +463,8 @@ const App: React.FC = () => {
       {!isInitialized ? (
         <WelcomeView onOnboardingComplete={handleOnboardingComplete} />
       ) : (
-        <div className="min-h-screen max-w-md mx-auto flex flex-col font-sans bg-transparent text-gray-800 dark:bg-transparent dark:text-gray-200 relative">
-          <main className="flex-grow p-4 pb-28">
+        <div className="h-screen w-screen flex flex-col font-sans bg-transparent text-gray-800 dark:bg-transparent dark:text-gray-200 relative overflow-hidden">
+          <main className="flex-grow p-4 pb-28 overflow-y-auto">
             {renderView()}
           </main>
           

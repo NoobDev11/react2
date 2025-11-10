@@ -5,6 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Habitta</title>
+
+    <!-- PWA & Mobile Native App Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Habitta">
+    <meta name="theme-color" content="#7C3AED">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/vite.svg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <script>
@@ -22,6 +31,11 @@
     <style>
       body {
         background-color: #F2ECFD; /* Custom light violet background */
+        /* Mobile native feel */
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+        -webkit-tap-highlight-color: transparent;
       }
       html.dark body {
         --tw-bg-opacity: 1;
