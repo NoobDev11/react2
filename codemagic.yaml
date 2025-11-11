@@ -8,6 +8,7 @@ workflows:
       - npm install
       - npm run build
       - npx cap sync android
+      - npm run dev
       - cd android && chmod +x gradlew
       - cd android && ./gradlew assembleDebug
       - cd android && ls app/build/outputs/apk/debug
